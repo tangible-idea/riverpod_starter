@@ -7,11 +7,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultLayout(
-    title: "Homescreen",
-    body: ListView(
-      children: [
-
-      ],
-    ));
+      title: "Home screen",
+      body: ListView(
+        children: [
+            ElevatedButton(onPressed: () {},
+              child: Text("StateProviderScreen"))
+        ],
+      ));
   }
 }
