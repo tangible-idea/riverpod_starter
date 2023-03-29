@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/screens/home_screen.dart';
 
 void main() {
   runApp(
-    const MaterialApp(home: HomeScreen())
+    const ProviderScope(child: MaterialApp(home: HomeScreen()))
   );
 }
