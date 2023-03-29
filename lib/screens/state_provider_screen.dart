@@ -10,7 +10,7 @@ class StateProviderScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final provider= ref.watch(numberProvider);
 
-    return DefaultLayout(title: "stae provider screen",
+    return DefaultLayout(title: "state provider screen",
         body: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Column(
@@ -22,7 +22,8 @@ class StateProviderScreen extends ConsumerWidget {
               }, child: Text("UP")),
               ElevatedButton(
                   onPressed: () {
-                    ref.read(numberProvider.notifier).update((state) => state - 1);
+                    ref.read(numberProvider.notifier).state =
+                        ref.read(numberProvider.notifier).state -1;
                   }, child: Text("DOWN")),
               Text(provider.toString())
           ],),
