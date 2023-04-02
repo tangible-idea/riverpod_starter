@@ -19,17 +19,24 @@ final userProfileListProvider = StateNotifierProvider<UserProfileNotifier, List<
 class UserProfileNotifier extends StateNotifier<List<UserProfileItem>> {
   UserProfileNotifier():
       super([
-        UserProfileItem(userName: 'Mark', age: 30, gender: "M"),
-        UserProfileItem(userName: 'Victor', age: 26, gender: "M"),
-        UserProfileItem(userName: 'Wonny', age: 20, gender: "F"),
+        UserProfileItem(id: 'a', userName: 'Mark', age: 30, gender: "M", isPremium: false),
+        UserProfileItem(id: 'b', userName: 'Victor', age: 26, gender: "M", isPremium: false),
+        UserProfileItem(id: 'c', userName: 'Wonny', age: 20, gender: "F", isPremium: false),
       ]);
 
   ///
-  void changeUserName({required String name, required String nameToChange}) {
-    state= state.map((e) => e.userName == name ?
-      UserProfileItem(userName: e.userName, age: e.age, gender: e.gender) :
-      UserProfileItem(userName: nameToChange, age: e.age, gender: e.gender)).toList();
+  void changeUserName({required String id, required String nameToChange}) {
+    state= state.map((e) => e.userName == id ?
+      UserProfileItem(id: e.id, userName: e.userName, age: e.age, gender: e.gender, isPremium: e.isPremium) :
+      UserProfileItem(id: e.id, userName: nameToChange, age: e.age, gender: e.gender, isPremium: e.isPremium)).toList();
   }
+
+  void changePremiumState({required String id}) {
+    state= state.map((e) => e.userName == id ?
+    UserProfileItem(id: e.id, userName: e.userName, age: e.age, gender: e.gender, isPremium: e.isPremium) :
+    UserProfileItem(id: e.id, userName: e.userName, age: e.age, gender: e.gender, isPremium: !e.isPremium)).toList();
+  }
+
 
 
 }

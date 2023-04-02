@@ -11,7 +11,12 @@ class StateNotifierProviderScreen extends ConsumerWidget {
     final state= ref.watch(userProfileListProvider);
     return Scaffold(
       body: ListView(children:
-          state.map((e) => Text(e.userName)).toList()
+          state.map((e) =>
+              CheckboxListTile(
+                title: Text(e.userName),
+                value: e.isPremium,
+              onChanged: (value) {},)
+          ).toList()
       ),
     );
   }
