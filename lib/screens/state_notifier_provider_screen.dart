@@ -15,7 +15,9 @@ class StateNotifierProviderScreen extends ConsumerWidget {
               CheckboxListTile(
                 title: Text(e.userName),
                 value: e.isPremium,
-              onChanged: (value) {},)
+              onChanged: (value) {
+                  ref.read(userProfileListProvider.notifier).changePremiumState(id: e.id);
+              },)
           ).toList()
       ),
     );
