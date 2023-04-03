@@ -5,13 +5,15 @@ import 'package:riverpod_playground/riverpod/future_provider.dart';
 import 'package:riverpod_playground/screens/state_notifier_provider_screen.dart';
 import 'package:riverpod_playground/screens/state_provider_screen.dart';
 
+import '../riverpod/stream_provider.dart';
+
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    final state= ref.watch(futureProvider);
+    final state= ref.watch(futureProvider(3));
 
     return DefaultLayout(
       title: "Home screen",
@@ -20,7 +22,7 @@ class HomeScreen extends ConsumerWidget {
             ElevatedButton(onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StateNotifierProviderScreen()));
             },
-              child: Text("StateProviderScreen")),
+              child: const Text("StateProviderScreen")),
           state.when(
             data: (data) {
               return Text(data.toString());
