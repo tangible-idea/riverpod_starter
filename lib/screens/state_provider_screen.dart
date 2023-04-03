@@ -1,7 +1,8 @@
+import 'package:code_viewer/code_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
-import 'package:riverpod_playground/riverpod/state_provider.dart';
+import 'package:riverpod_playground/riverpod/simple_state_provider.dart';
 
 class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class StateProviderScreen extends ConsumerWidget {
 
     return DefaultLayout(title: "state provider screen",
         body: SizedBox(
-          width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
