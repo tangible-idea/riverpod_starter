@@ -9,10 +9,7 @@ import 'package:riverpod_playground/model/user_profile_item.dart';
 /// Generic2: What class should this notifier manage.
 /// return: Same as Generic2.
 ///
-///
-/// comment about this class
-///
-/// //
+/// StateNotifierProvider is a combination of StateProvider and ChangeNotifierProvider.
 final userProfileListProvider = StateNotifierProvider<UserProfileNotifier, List<UserProfileItem>>
   ((ref) => UserProfileNotifier());
 
@@ -24,7 +21,6 @@ class UserProfileNotifier extends StateNotifier<List<UserProfileItem>> {
         UserProfileItem(id: 'c', userName: 'Wonny', age: 20, gender: "F", isPremium: false),
       ]);
 
-  ///
   void changeUserName({required String id, required String nameToChange}) {
     state= state.map((e) => e.id == id ?
       UserProfileItem(id: e.id, userName: nameToChange, age: e.age, gender: e.gender, isPremium: e.isPremium) :
