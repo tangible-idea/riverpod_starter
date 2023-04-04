@@ -3,6 +3,6 @@ class Assets {
   Assets._();
 
   static const String codesImgStateprovider = 'assets/codes/img_stateprovider.png';
-  static const String codesSnap (2) = 'assets/codes/img_stateproviderscreen.png';
+  static const String codesImgStateproviderscreen = 'assets/codes/img_stateproviderscreen.png';
 
 }

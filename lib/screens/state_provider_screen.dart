@@ -4,6 +4,8 @@ import 'package:riverpod_playground/constants/app_sizes.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/simple_state_provider.dart';
 
+import '../generated/assets.dart';
+
 class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({Key? key}) : super(key: key);
 
@@ -16,10 +18,10 @@ class StateProviderScreen extends ConsumerWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset("assets/codes/img_stateprovider.png"),
+              Image.asset(Assets.codesImgStateprovider),
               const Text("\nThere are many ways to use StateProvider. But the most common way is to use it as a simple state management."),
               gapH20,
-              Image.asset("assets/codes/img_stateproviderscreen.png"),
+              Image.asset(Assets.codesImgStateproviderscreen),
               const Text("\nPress UP: update the state by adding 1\nPress DOWN: update the state by subtracting 1 (use state 2times.)"),
               const Text("\nTry press UP or DOWN button to change the number."),
               gapH20,
