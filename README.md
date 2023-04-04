@@ -6,7 +6,7 @@ a guide project for riverpod.
 
 This project is a guide for a Riverpod state management.
 
-![simple_stateprovider](https://user-images.githubusercontent.com/4496005/229782774-e14533d3-b123-4c2c-b18a-28d8e439e3b8.jpeg)
+<img src="https://user-images.githubusercontent.com/4496005/229782774-e14533d3-b123-4c2c-b18a-28d8e439e3b8.jpeg" width=250/>
 
 A few resources to get you started if this is your first Riverpod project:
 
