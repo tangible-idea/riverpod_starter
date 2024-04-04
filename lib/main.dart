@@ -8,10 +8,13 @@ void main() {
     const ProviderScope(child:
       MaterialApp(
         title: "Riverpod starter",
-        localizationsDelegates: [GlobalMaterialLocalizations.delegate],
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
         supportedLocales: [
-          Locale('en'),
-          Locale('ko')
+          Locale('en', ''),
+          Locale('ko', '')
         ],
         home: HomeScreen())
       )

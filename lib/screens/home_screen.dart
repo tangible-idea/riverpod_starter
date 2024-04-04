@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/future_provider.dart';
 import 'package:riverpod_playground/screens/future_provider_screen.dart';
@@ -26,7 +27,7 @@ class HomeScreen extends ConsumerWidget {
                         "read() is used to read the value of a provider."
                         "\nIt is used inside a ConsumerWidget's build method."
                         "\nread() is normally used in functions which is called single time.")));
-            }, child: const Text("What is read()?")
+            }, child: Text(Intl.message("helloWorld"))
           ),
           ElevatedButton(
               onPressed: () {
