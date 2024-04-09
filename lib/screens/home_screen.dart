@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
@@ -15,6 +16,9 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
+    context.setLocale(const Locale('en'));
+    print(context.locale.toString());
+
     return DefaultLayout(
       title: "Home screen",
       body: ListView(
@@ -26,7 +30,7 @@ class HomeScreen extends ConsumerWidget {
                         "read() is used to read the value of a provider."
                         "\nIt is used inside a ConsumerWidget's build method."
                         "\nread() is normally used in functions which is called single time.")));
-            }, child: const Text("What is read()?")
+            }, child: Text('msg').tr(),
           ),
           ElevatedButton(
               onPressed: () {

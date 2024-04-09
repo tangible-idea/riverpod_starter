@@ -3,7 +3,7 @@
    <application
         android:label="riverpod_playground"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/riverpod_logo">
         <activity
             android:name=".MainActivity"
             android:exported="true"
