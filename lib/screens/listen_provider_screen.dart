@@ -9,6 +9,7 @@ import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/listen_provider.dart';
 
 import '../constants/app_sizes.dart';
+import '../constants/text_styles.dart';
 
 class ListenProviderScreen extends ConsumerStatefulWidget {
   const ListenProviderScreen({super.key});
@@ -46,38 +47,44 @@ class _ListenProviderScreenState extends ConsumerState<ListenProviderScreen> wit
     });
 
     return DefaultLayout(title: 'ListenProviderScreen',
-        body: Column(
-          children: [
-            const Text("what", style: TextStyle(fontSize: 23)).tr(),
-            const Text('listen_detail').tr(),
-            gapH20,
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              gapH20,
 
-            const Text("where", style: TextStyle(fontSize: 23)).tr(),
-            const Text('listen_where').tr(),
-            gapH20,
+              const Text("what", style: TextStyles.styleHeader).tr(),
+              const Text('listen_detail', style: TextStyles.styleContent).tr(),
+              gapH20,
 
-            const Text("when", style: TextStyle(fontSize: 23)).tr(),
-            const Text('listen_when').tr(),
-            gapH20,
+              const Text("where", style: TextStyles.styleHeader).tr(),
+              const Text('listen_where', style: TextStyles.styleContent).tr(),
+              gapH20,
 
-            Flexible(
-              child: TabBarView(
-              controller: controller,
-              physics: const NeverScrollableScrollPhysics(),
-                children: List.generate(TAB_COUNT, (index) =>
-                    Column(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(index.toString()),
-                        ElevatedButton(onPressed: () {
-                          ref.read(listenProvider.notifier).update((state) => state == 0 ? 0: state - 1);
-                        }, child: const Text("prev").tr()),
-                        ElevatedButton(onPressed: () {
-                          ref.read(listenProvider.notifier).update((state) => state == TAB_COUNT ? TAB_COUNT : state + 1);
-                        }, child: const Text("next").tr())
-                      ]
-              )
-                )),
-            ),
-        ]));
+              const Text("when", style: TextStyles.styleHeader).tr(),
+              const Text('listen_when', style: TextStyles.styleContent).tr(),
+              gapH20,
+
+              Flexible(
+                child: TabBarView(
+                controller: controller,
+                physics: const NeverScrollableScrollPhysics(),
+                  children: List.generate(TAB_COUNT, (index) =>
+                      Column(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(index.toString()),
+                          ElevatedButton(onPressed: () {
+                            ref.read(listenProvider.notifier).update((state) => state == 0 ? 0: state - 1);
+                          }, child: const Text("prev").tr()),
+                          ElevatedButton(onPressed: () {
+                            ref.read(listenProvider.notifier).update((state) => state == TAB_COUNT ? TAB_COUNT : state + 1);
+                          }, child: const Text("next").tr())
+                        ]
+                )
+                  )),
+              ),
+          ]),
+        ));
   }
 }

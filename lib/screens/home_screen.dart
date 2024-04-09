@@ -48,14 +48,14 @@ class HomeScreen extends ConsumerWidget {
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) =>
                     DetailDescScreen("read()",
-                        'read_detail'.tr(), 'read_detail'.tr(), 'read_detail'.tr())));
+                        'read_detail'.tr(), 'read_where'.tr(), 'read_when'.tr())));
             }, child: const Text('read').tr(),
           ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) =>
                     DetailDescScreen("watch()",
-                        'watch_detail'.tr(), 'watch_detail'.tr(), 'watch_detail'.tr())));
+                        'watch_detail'.tr(), 'watch_where'.tr(), 'watch_when'.tr())));
               }, child: const Text('watch').tr(),
           ),
           ElevatedButton(
