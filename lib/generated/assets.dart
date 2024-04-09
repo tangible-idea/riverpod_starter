@@ -5,8 +5,6 @@ class Assets {
   static const String codesImgStateprovider = 'assets/codes/img_stateprovider.png';
   static const String codesImgStateproviderscreen = 'assets/codes/img_stateproviderscreen.png';
   static const String translationsEn = 'assets/translations/en.json';
-  static const String translationsEnUS = 'assets/translations/en-US.json';
   static const String translationsKo = 'assets/translations/ko.json';
-  static const String translationsKoKR = 'assets/translations/ko-KR.json';
 
 }

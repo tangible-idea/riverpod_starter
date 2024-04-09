@@ -3,6 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/screens/home_screen.dart';
 
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        home: const HomeScreen()
+    );
+  }
+}
+
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,8 +34,10 @@ void main() async {
             Locale('en'),
             Locale('ko')
           ],
+
           useOnlyLangCode: true,
-          child: const MaterialApp(home: HomeScreen()),)
+          child: MyApp()
+        )
 
     )
   );

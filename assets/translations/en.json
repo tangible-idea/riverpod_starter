@@ -1,15 +1,8 @@
 {
-    "msg":"test test",
-    "msg_named":"Easy localization is written in the {lang} language",
-    "msg_mixed":"{} are written in the {lang} language",
-    "gender":{
-        "male":"Hi man ;) {}",
-        "female":"Hello girl :) {}",
-        "other":"Hello {}"
-    },
-    "example": {
-        "hello": "Hello",
-        "world": "World!",
-        "helloWorld": "@:example.hello @:example.world"
-    }
+    "read":"What is read()?",
+    "watch":"What is watch()?",
+    "listen":"What is listen?",
+    "simple_state_provider":"Just a simple StateProvider",
+    "state_notifier_provider":"How to use StateNotifierProvider",
+    "future_provider":"How to use FutureProvider"
 }

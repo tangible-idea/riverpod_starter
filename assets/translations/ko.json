@@ -1,10 +1,8 @@
 {
-    "msg":"{} are written in the {} language",
-    "msg_named":"Easy localization is written in the {lang} language",
-    "msg_mixed":"{} are written in the {lang} language",
-    "gender":{
-        "male":"Hi man ;) {}",
-        "female":"Hello girl :) {}",
-        "other":"Hello {}"
-    }
+    "read":"read() 사용하기",
+    "watch":"watch() 사용하기",
+    "listen":"read() 사용하기",
+    "simple_state_provider":"간단하게 StateProvider 사용하기",
+    "state_notifier_provider":"StateNotifierProvider 사용하는 법",
+    "future_provider":"FutureProvider 사용하는 법"
 }

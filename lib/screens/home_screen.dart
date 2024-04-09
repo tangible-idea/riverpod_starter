@@ -13,14 +13,33 @@ import '../riverpod/stream_provider.dart';
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  void changeLang(BuildContext context) {
+    var currLang= context.locale.toString();
+    switch(currLang) {
+      case "ko":
+        context.setLocale(const Locale('en'));
+        break;
+      case "en":
+        context.setLocale(const Locale('ko'));
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    context.setLocale(const Locale('en'));
+    //context.setLocale(const Locale('en'));
     print(context.locale.toString());
 
     return DefaultLayout(
       title: "Home screen",
+      actions: [
+          IconButton(
+          icon: const Icon(Icons.language),
+          onPressed: () async {
+            changeLang(context);
+          }),
+        ],
       body: ListView(
         children: [
           ElevatedButton(
@@ -30,7 +49,7 @@ class HomeScreen extends ConsumerWidget {
                         "read() is used to read the value of a provider."
                         "\nIt is used inside a ConsumerWidget's build method."
                         "\nread() is normally used in functions which is called single time.")));
-            }, child: Text('msg').tr(),
+            }, child: const Text('read').tr(),
           ),
           ElevatedButton(
               onPressed: () {
@@ -38,7 +57,7 @@ class HomeScreen extends ConsumerWidget {
                 const SimpleDescScreen("watch()",
                     "watch() is used retrieving the value constantly form the provider."
                         "\nYou should use watch() only there is a need to rebuild the widget when the value changes.")));
-              }, child: const Text("What is watch()?")
+              }, child: const Text('watch').tr(),
           ),
           ElevatedButton(
               onPressed: () {
@@ -46,22 +65,22 @@ class HomeScreen extends ConsumerWidget {
                 const SimpleDescScreen("listen()",
                     "listen() is used when you want to listen the previous value and the current value at the same time."
                         "\nFor example, In a case when you need to show animation when by value changes.")));
-              }, child: const Text("What is listen()?")
+              }, child: const Text('listen').tr(),
           ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StateProviderScreen()));
-            }, child: const Text("Just a simple StateProvider")
+            }, child: const Text('simple_state_provider').tr(),
           ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StateNotifierProviderScreen()));
-            }, child: const Text("How to use StateNotifierProvider")
+            }, child: const Text('state_notifier_provider').tr(),
           ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) => const FutureProviderScreen()));
-            }, child: const Text("How to use FutureProvider")
+            }, child: const Text('future_provider').tr(),
           ),
         ],
       ));
