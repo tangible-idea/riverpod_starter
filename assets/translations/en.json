@@ -1,12 +1,22 @@
 {
+    "what" : "What?",
+    "where" : "Where?",
+    "when" : "When?",
+
     "read":"What is read()?",
-    "read_detail": "\"read() is used to read the value of a provider.\"\n\"\\nIt is used inside a ConsumerWidget's build method.\"\n\"\\nread() is normally used in functions which is called single time.\"",
+    "read_detail": "\"Use read to the get the value of provider just once (one-time read), read() is used to read the value of a provider.\"\n\"\\nIt is used inside a ConsumerWidget's build method.\"\n\"\\nread() is normally used in functions which is called single time.\"",
+    "read_when": "Use read when you want to value of the provider only once.",
+    "read_where": "You can use read in places like initState , callbacks like onPressed etc.",
 
     "watch":"What is watch()?",
-    "watch_detail": "",
+    "watch_detail": "Use watch to the get the value of provider the first time and every time the value changes (see it like you're subscribing to the provider, so you get notified any time there's a change)",
+    "watch_when": "Use watch when you want to always get the value.",
+    "watch_where": "It should not be called asynchronously, like inside an onPressed of an ElevatedButton. Nor should it be used inside initState and other State life-cycles.",
 
     "listen":"What is listen?",
-    "listen_detail":"Listen is",
+    "listen_detail":"listen is similar to watch. The main difference is the return type. watch returns the new value directly, listen returns a void but gives access to the new value and the old value with a callback",
+    "listen_when": "Use watch when you want to always get the value.",
+    "listen_where": "It should not be called asynchronously, like inside an onPressed of an ElevatedButton. Nor should it be used inside initState and other State life-cycles.",
 
     "simple_state_provider":"Just a simple StateProvider",
     "state_notifier_provider":"How to use StateNotifierProvider",

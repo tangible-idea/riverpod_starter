@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/future_provider.dart';
+import 'package:riverpod_playground/screens/detail_description_screen.dart';
 import 'package:riverpod_playground/screens/future_provider_screen.dart';
 import 'package:riverpod_playground/screens/listen_provider_screen.dart';
 import 'package:riverpod_playground/screens/simple_description_screen.dart';
@@ -46,18 +47,15 @@ class HomeScreen extends ConsumerWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) =>
-                    const SimpleDescScreen("read()",
-                        "read() is used to read the value of a provider."
-                        "\nIt is used inside a ConsumerWidget's build method."
-                        "\nread() is normally used in functions which is called single time.")));
+                    DetailDescScreen("read()",
+                        'read_detail'.tr(), 'read_detail'.tr(), 'read_detail'.tr())));
             }, child: const Text('read').tr(),
           ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) =>
-                const SimpleDescScreen("watch()",
-                    "watch() is used retrieving the value constantly form the provider."
-                        "\nYou should use watch() only there is a need to rebuild the widget when the value changes.")));
+                    DetailDescScreen("watch()",
+                        'watch_detail'.tr(), 'watch_detail'.tr(), 'watch_detail'.tr())));
               }, child: const Text('watch').tr(),
           ),
           ElevatedButton(

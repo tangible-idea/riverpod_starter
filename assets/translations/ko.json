@@ -1,12 +1,23 @@
 {
-    "read":"read() 사용하기",
+    "what" : "자세한 설명",
+    "where" : "어디에서 사용하나요?",
+    "when" : "언제 사용하나요?",
+
+    "read":"read() 사용법",
     "read_detail": "read() 는 말 그대로 provider의 값을 읽어올 때 씁니다. 실행되는 순간 한번만 provider값을 가져옵니다. ConsumerWidget의 build 내부 또는 ConsumerStatefulWidget에서 initState() 내부에서 초기화합니다. read() 로 값을 변경할 수 있습니다. ",
+    "read_when": "단 한번 값을 사용하거나 수정할 때 사용합니다.",
+    "read_where": "보통 initState와 onPressed 같은 콜백함수에서 사용합니다.",
 
-    "watch":"watch() 사용하기",
-    "watch_detail": "watch() is used retrieving the value constantly form the provider. You should use watch() only there is a need to rebuild the widget when the value changes.",
+    "watch":"watch() 사용법",
+    "watch_detail": "provider의 값을 처음으로 가져오고 값이 변경될 때마다 가져오기 위해 watch를 사용하세요 (provider를 구독하는 것처럼 보시면 되며, 어떤 변경이 있을 때마다 알림을 받게 됩니다).",
+    "watch_when": "항상 값을 바라보고 가져와야할 때 사용합니다.",
+    "watch_where": "비동기적으로 호출해서는 안 되며, 예를 들어 ElevatedButton의 onPressed 내부와 같은 곳에서 사용해서는 안 됩니다. 또한 initState 및 기타 State 생명주기 내부에서도 사용해서는 안 됩니다.",
 
-    "listen":"listen() 사용하기",
-    "listen_detail":"listen",
+    "listen":"listen() 사용법",
+    "listen_detail":"listen은 watch와 비슷합니다. 주된 차이점은 반환 타입에 있습니다. watch는 새로운 값을 직접 반환하지만, listen은 void를 반환하며 콜백을 통해 새로운 값과 이전 값을 접근할 수 있게 해줍니다.",
+    "listen_when": "항상 값을 가져오면서 이전/현재 값을 같이 보고 싶을 때 사용합니다.",
+    "listen_where": "비동기적으로 호출해서는 안 되며, 예를 들어 ElevatedButton의 onPressed 내부와 같은 곳에서 사용해서는 안 됩니다. 또한 initState 및 기타 State 생명주기 내부에서도 사용해서는 안 됩니다.",
+
 
     "simple_state_provider":"간단하게 StateProvider 사용하기",
     "state_notifier_provider":"StateNotifierProvider 사용하는 법",

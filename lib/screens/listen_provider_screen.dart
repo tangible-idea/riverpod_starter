@@ -7,6 +7,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/listen_provider.dart';
 
+import '../constants/app_sizes.dart';
+
 class ListenProviderScreen extends ConsumerStatefulWidget {
   const ListenProviderScreen({super.key});
 
@@ -41,7 +43,18 @@ class _ListenProviderScreenState extends ConsumerState<ListenProviderScreen> wit
     return DefaultLayout(title: 'ListenProviderScreen',
         body: Column(
           children: [
-            const Text("listen_detail").tr(),
+            const Text("what", style: TextStyle(fontSize: 23)).tr(),
+            const Text('listen_detail').tr(),
+            gapH20,
+
+            const Text("where", style: TextStyle(fontSize: 23)).tr(),
+            const Text('listen_where').tr(),
+            gapH20,
+
+            const Text("when", style: TextStyle(fontSize: 23)).tr(),
+            const Text('listen_when').tr(),
+            gapH20,
+
             Flexible(
               child: TabBarView(
               controller: controller,
