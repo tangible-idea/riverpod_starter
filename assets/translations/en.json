@@ -22,6 +22,11 @@
     "state_notifier_provider":"How to use StateNotifierProvider",
     "future_provider":"How to use FutureProvider",
 
+    "simple_state_provider_1": "\nThere are many ways to use StateProvider. But the most common way is to use it as a simple state management.",
+    "simple_state_provider_2": "\nPress UP: update the state by adding 1\nPress DOWN: update the state by subtracting 1 (use state 2times.)",
+    "simple_state_provider_3": "\nTry press UP or DOWN button to change the number.",
+
+
     "prev":"Prev",
     "next":"Next"
 }

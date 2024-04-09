@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
@@ -15,6 +16,7 @@ import '../riverpod/stream_provider.dart';
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  // change your language.
   void changeLang(BuildContext context) {
     var currLang= context.locale.toString();
     switch(currLang) {
@@ -30,8 +32,9 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    //context.setLocale(const Locale('en'));
-    print(context.locale.toString());
+    if (kDebugMode) {
+      print(context.locale.toString());
+    }
 
     return DefaultLayout(
       title: "How to Riverpod",

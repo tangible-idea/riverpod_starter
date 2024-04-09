@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/constants/app_sizes.dart';
@@ -19,11 +20,11 @@ class StateProviderScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(Assets.codesImgStateprovider),
-              const Text("\nThere are many ways to use StateProvider. But the most common way is to use it as a simple state management."),
+              Text("simple_state_provider_1".tr()),
               gapH20,
               Image.asset(Assets.codesImgStateproviderscreen),
-              const Text("\nPress UP: update the state by adding 1\nPress DOWN: update the state by subtracting 1 (use state 2times.)"),
-              const Text("\nTry press UP or DOWN button to change the number."),
+              Text("simple_state_provider_2".tr()),
+              Text("simple_state_provider_3".tr()),
               gapH20,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
