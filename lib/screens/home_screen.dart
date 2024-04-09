@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_playground/layout/default_layout.dart';
 import 'package:riverpod_playground/riverpod/future_provider.dart';
 import 'package:riverpod_playground/screens/future_provider_screen.dart';
+import 'package:riverpod_playground/screens/listen_provider_screen.dart';
 import 'package:riverpod_playground/screens/simple_description_screen.dart';
 import 'package:riverpod_playground/screens/state_notifier_provider_screen.dart';
 import 'package:riverpod_playground/screens/state_provider_screen.dart';
@@ -32,7 +33,7 @@ class HomeScreen extends ConsumerWidget {
     print(context.locale.toString());
 
     return DefaultLayout(
-      title: "Home screen",
+      title: "How to Riverpod",
       actions: [
           IconButton(
           icon: const Icon(Icons.language),
@@ -60,12 +61,9 @@ class HomeScreen extends ConsumerWidget {
               }, child: const Text('watch').tr(),
           ),
           ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) =>
-                const SimpleDescScreen("listen()",
-                    "listen() is used when you want to listen the previous value and the current value at the same time."
-                        "\nFor example, In a case when you need to show animation when by value changes.")));
-              }, child: const Text('listen').tr(),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ListenProviderScreen()));
+            }, child: const Text('listen').tr(),
           ),
           ElevatedButton(
               onPressed: () {

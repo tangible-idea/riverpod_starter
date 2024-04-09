@@ -1,8 +1,17 @@
 {
     "read":"What is read()?",
+    "read_detail": "\"read() is used to read the value of a provider.\"\n\"\\nIt is used inside a ConsumerWidget's build method.\"\n\"\\nread() is normally used in functions which is called single time.\"",
+
     "watch":"What is watch()?",
+    "watch_detail": "",
+
     "listen":"What is listen?",
+    "listen_detail":"What is listen?",
+
     "simple_state_provider":"Just a simple StateProvider",
     "state_notifier_provider":"How to use StateNotifierProvider",
-    "future_provider":"How to use FutureProvider"
+    "future_provider":"How to use FutureProvider",
+
+    "prev":"Prev",
+    "next":"Next"
 }
