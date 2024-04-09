@@ -6,7 +6,7 @@
     "watch_detail": "",
 
     "listen":"What is listen?",
-    "listen_detail":"What is listen?",
+    "listen_detail":"Listen is",
 
     "simple_state_provider":"Just a simple StateProvider",
     "state_notifier_provider":"How to use StateNotifierProvider",
